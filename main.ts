@@ -21,9 +21,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile8`, function (sprite, location) {
-    game.setGameOverEffect(true, effects.confetti)
-    game.setGameOverMessage(true, "bravo!!")
-    game.gameOver(true)
+    scene.setBackgroundColor(9)
+    tiles.setCurrentTilemap(tilemap`niveau2`)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
